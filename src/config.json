@@ -1,0 +1,6 @@
+{
+    "filter":"-is:new",
+    "also_export_last": false,
+    "start_date_range": false,
+    "end_date_range": false
+}
