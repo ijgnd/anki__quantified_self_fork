@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 
+import io
 import time
 import csv
 import os.path
@@ -94,7 +95,7 @@ class PerformanceExtractor():
 
     def export_csv(self, filename):
         'Save revisions history to a CSV file'
-        with open(filename, "w") as fd:
+        with io.open(filename, "w", encoding="utf-8") as fd:
             self.parse_revlog()
             w = csv.writer(fd)
             w.writerow(["Date1",
